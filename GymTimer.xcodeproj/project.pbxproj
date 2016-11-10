@@ -7,13 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6CE71AA14AE405CB2A8CBA14 /* Pods_GymTimer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06D4A08147FD5DCDD1ED6A76 /* Pods_GymTimer.framework */; };
+		804C7F2958C643BDA718ED48 /* Pods_GymTimerUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ECA6C5C4F45B5C5C735C85C7 /* Pods_GymTimerUITests.framework */; };
+		ADAFAC081DD4C74500D5E341 /* GTTimerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADAFAC071DD4C74500D5E341 /* GTTimerViewController.swift */; };
+		ADAFAC091DD4C74500D5E341 /* GTTimerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADAFAC071DD4C74500D5E341 /* GTTimerViewController.swift */; };
 		ADD004861DD4C364001B880E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADD004851DD4C364001B880E /* AppDelegate.swift */; };
-		ADD004881DD4C364001B880E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADD004871DD4C364001B880E /* ViewController.swift */; };
-		ADD0048B1DD4C364001B880E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ADD004891DD4C364001B880E /* Main.storyboard */; };
+		ADD004881DD4C364001B880E /* GTSetupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADD004871DD4C364001B880E /* GTSetupViewController.swift */; };
 		ADD0048D1DD4C364001B880E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ADD0048C1DD4C364001B880E /* Assets.xcassets */; };
 		ADD004901DD4C364001B880E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ADD0048E1DD4C364001B880E /* LaunchScreen.storyboard */; };
 		ADD0049B1DD4C364001B880E /* GymTimerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADD0049A1DD4C364001B880E /* GymTimerTests.swift */; };
 		ADD004A61DD4C364001B880E /* GymTimerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADD004A51DD4C364001B880E /* GymTimerUITests.swift */; };
+		B4E739067100D5A872C8A2B4 /* Pods_GymTimerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C2F8405F6AA7BF8A5B281D66 /* Pods_GymTimerTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,10 +38,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		06D4A08147FD5DCDD1ED6A76 /* Pods_GymTimer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GymTimer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7B24B2A83FFACA08F53D0AC1 /* Pods-GymTimer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GymTimer.release.xcconfig"; path = "Pods/Target Support Files/Pods-GymTimer/Pods-GymTimer.release.xcconfig"; sourceTree = "<group>"; };
+		9A6ED3D921BC8D9E05ADD061 /* Pods-GymTimer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GymTimer.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GymTimer/Pods-GymTimer.debug.xcconfig"; sourceTree = "<group>"; };
+		9C7D638837F57CC73A96FD1C /* Pods-GymTimerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GymTimerTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GymTimerTests/Pods-GymTimerTests.debug.xcconfig"; sourceTree = "<group>"; };
+		ADAFAC071DD4C74500D5E341 /* GTTimerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GTTimerViewController.swift; sourceTree = "<group>"; };
 		ADD004821DD4C364001B880E /* GymTimer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GymTimer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ADD004851DD4C364001B880E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		ADD004871DD4C364001B880E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		ADD0048A1DD4C364001B880E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		ADD004871DD4C364001B880E /* GTSetupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GTSetupViewController.swift; sourceTree = "<group>"; };
 		ADD0048C1DD4C364001B880E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		ADD0048F1DD4C364001B880E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		ADD004911DD4C364001B880E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -47,6 +55,11 @@
 		ADD004A11DD4C364001B880E /* GymTimerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GymTimerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		ADD004A51DD4C364001B880E /* GymTimerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GymTimerUITests.swift; sourceTree = "<group>"; };
 		ADD004A71DD4C364001B880E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AFE8F193409651C61CF04B05 /* Pods-GymTimerUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GymTimerUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GymTimerUITests/Pods-GymTimerUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		BA2932699A947FD7A1F8C591 /* Pods-GymTimerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GymTimerTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-GymTimerTests/Pods-GymTimerTests.release.xcconfig"; sourceTree = "<group>"; };
+		C2F0E65F0F6AFF71AEB03B55 /* Pods-GymTimerUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GymTimerUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-GymTimerUITests/Pods-GymTimerUITests.release.xcconfig"; sourceTree = "<group>"; };
+		C2F8405F6AA7BF8A5B281D66 /* Pods_GymTimerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GymTimerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		ECA6C5C4F45B5C5C735C85C7 /* Pods_GymTimerUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GymTimerUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +67,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6CE71AA14AE405CB2A8CBA14 /* Pods_GymTimer.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,6 +75,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B4E739067100D5A872C8A2B4 /* Pods_GymTimerTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,12 +83,36 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				804C7F2958C643BDA718ED48 /* Pods_GymTimerUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		94F8BF099C98E675512388A7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				06D4A08147FD5DCDD1ED6A76 /* Pods_GymTimer.framework */,
+				C2F8405F6AA7BF8A5B281D66 /* Pods_GymTimerTests.framework */,
+				ECA6C5C4F45B5C5C735C85C7 /* Pods_GymTimerUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		ACB1D7C2A1136DD7167F69C0 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9A6ED3D921BC8D9E05ADD061 /* Pods-GymTimer.debug.xcconfig */,
+				7B24B2A83FFACA08F53D0AC1 /* Pods-GymTimer.release.xcconfig */,
+				9C7D638837F57CC73A96FD1C /* Pods-GymTimerTests.debug.xcconfig */,
+				BA2932699A947FD7A1F8C591 /* Pods-GymTimerTests.release.xcconfig */,
+				AFE8F193409651C61CF04B05 /* Pods-GymTimerUITests.debug.xcconfig */,
+				C2F0E65F0F6AFF71AEB03B55 /* Pods-GymTimerUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		ADD004791DD4C364001B880E = {
 			isa = PBXGroup;
 			children = (
@@ -81,6 +120,8 @@
 				ADD004991DD4C364001B880E /* GymTimerTests */,
 				ADD004A41DD4C364001B880E /* GymTimerUITests */,
 				ADD004831DD4C364001B880E /* Products */,
+				ACB1D7C2A1136DD7167F69C0 /* Pods */,
+				94F8BF099C98E675512388A7 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -98,8 +139,8 @@
 			isa = PBXGroup;
 			children = (
 				ADD004851DD4C364001B880E /* AppDelegate.swift */,
-				ADD004871DD4C364001B880E /* ViewController.swift */,
-				ADD004891DD4C364001B880E /* Main.storyboard */,
+				ADD004871DD4C364001B880E /* GTSetupViewController.swift */,
+				ADAFAC071DD4C74500D5E341 /* GTTimerViewController.swift */,
 				ADD0048C1DD4C364001B880E /* Assets.xcassets */,
 				ADD0048E1DD4C364001B880E /* LaunchScreen.storyboard */,
 				ADD004911DD4C364001B880E /* Info.plist */,
@@ -132,9 +173,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = ADD004AA1DD4C364001B880E /* Build configuration list for PBXNativeTarget "GymTimer" */;
 			buildPhases = (
+				3D169EAA0B4BBF8BB3F1B9D8 /* [CP] Check Pods Manifest.lock */,
 				ADD0047E1DD4C364001B880E /* Sources */,
 				ADD0047F1DD4C364001B880E /* Frameworks */,
 				ADD004801DD4C364001B880E /* Resources */,
+				04B43C61F7C05435DC0B4E9C /* [CP] Embed Pods Frameworks */,
+				9B582ECB353AD67490C99008 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -149,9 +193,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = ADD004AD1DD4C364001B880E /* Build configuration list for PBXNativeTarget "GymTimerTests" */;
 			buildPhases = (
+				587955F5947E0AEEE62075B7 /* [CP] Check Pods Manifest.lock */,
 				ADD004921DD4C364001B880E /* Sources */,
 				ADD004931DD4C364001B880E /* Frameworks */,
 				ADD004941DD4C364001B880E /* Resources */,
+				136B9A00A2754D3E44C2AEEE /* [CP] Embed Pods Frameworks */,
+				2ADBB03CF5CB8AFB1158A922 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -167,9 +214,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = ADD004B01DD4C364001B880E /* Build configuration list for PBXNativeTarget "GymTimerUITests" */;
 			buildPhases = (
+				833E72494C8FA7ACB558BAAF /* [CP] Check Pods Manifest.lock */,
 				ADD0049D1DD4C364001B880E /* Sources */,
 				ADD0049E1DD4C364001B880E /* Frameworks */,
 				ADD0049F1DD4C364001B880E /* Resources */,
+				576EF01425E221EFBE294F6E /* [CP] Embed Pods Frameworks */,
+				6711D5739ABDDC3CC5939F2C /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -234,7 +284,6 @@
 			files = (
 				ADD004901DD4C364001B880E /* LaunchScreen.storyboard in Resources */,
 				ADD0048D1DD4C364001B880E /* Assets.xcassets in Resources */,
-				ADD0048B1DD4C364001B880E /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -254,12 +303,151 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		04B43C61F7C05435DC0B4E9C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GymTimer/Pods-GymTimer-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		136B9A00A2754D3E44C2AEEE /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GymTimerTests/Pods-GymTimerTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2ADBB03CF5CB8AFB1158A922 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GymTimerTests/Pods-GymTimerTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3D169EAA0B4BBF8BB3F1B9D8 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		576EF01425E221EFBE294F6E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GymTimerUITests/Pods-GymTimerUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		587955F5947E0AEEE62075B7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		6711D5739ABDDC3CC5939F2C /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GymTimerUITests/Pods-GymTimerUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		833E72494C8FA7ACB558BAAF /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		9B582ECB353AD67490C99008 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GymTimer/Pods-GymTimer-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		ADD0047E1DD4C364001B880E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ADD004881DD4C364001B880E /* ViewController.swift in Sources */,
+				ADD004881DD4C364001B880E /* GTSetupViewController.swift in Sources */,
+				ADAFAC081DD4C74500D5E341 /* GTTimerViewController.swift in Sources */,
 				ADD004861DD4C364001B880E /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -269,6 +457,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				ADD0049B1DD4C364001B880E /* GymTimerTests.swift in Sources */,
+				ADAFAC091DD4C74500D5E341 /* GTTimerViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -296,14 +485,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		ADD004891DD4C364001B880E /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				ADD0048A1DD4C364001B880E /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		ADD0048E1DD4C364001B880E /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -408,6 +589,7 @@
 		};
 		ADD004AB1DD4C364001B880E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9A6ED3D921BC8D9E05ADD061 /* Pods-GymTimer.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = GymTimer/Info.plist;
@@ -420,6 +602,7 @@
 		};
 		ADD004AC1DD4C364001B880E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7B24B2A83FFACA08F53D0AC1 /* Pods-GymTimer.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = GymTimer/Info.plist;
@@ -432,6 +615,7 @@
 		};
 		ADD004AE1DD4C364001B880E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9C7D638837F57CC73A96FD1C /* Pods-GymTimerTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -446,6 +630,7 @@
 		};
 		ADD004AF1DD4C364001B880E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BA2932699A947FD7A1F8C591 /* Pods-GymTimerTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -460,6 +645,7 @@
 		};
 		ADD004B11DD4C364001B880E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AFE8F193409651C61CF04B05 /* Pods-GymTimerUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				INFOPLIST_FILE = GymTimerUITests/Info.plist;
@@ -473,6 +659,7 @@
 		};
 		ADD004B21DD4C364001B880E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C2F0E65F0F6AFF71AEB03B55 /* Pods-GymTimerUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				INFOPLIST_FILE = GymTimerUITests/Info.plist;
@@ -503,6 +690,7 @@
 				ADD004AC1DD4C364001B880E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		ADD004AD1DD4C364001B880E /* Build configuration list for PBXNativeTarget "GymTimerTests" */ = {
 			isa = XCConfigurationList;
@@ -511,6 +699,7 @@
 				ADD004AF1DD4C364001B880E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		ADD004B01DD4C364001B880E /* Build configuration list for PBXNativeTarget "GymTimerUITests" */ = {
 			isa = XCConfigurationList;
@@ -519,6 +708,7 @@
 				ADD004B21DD4C364001B880E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
