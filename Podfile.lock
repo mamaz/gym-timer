@@ -2,13 +2,16 @@ PODS:
   - ChameleonFramework (2.1.0):
     - ChameleonFramework/Default (= 2.1.0)
   - ChameleonFramework/Default (2.1.0)
+  - SnapKit (3.0.2)
 
 DEPENDENCIES:
   - ChameleonFramework (= 2.1.0)
+  - SnapKit (~> 3.0.2)
 
 SPEC CHECKSUMS:
   ChameleonFramework: d21a3cc247abfe5e37609a283a8238b03575cf64
+  SnapKit: 2e456761aa92d4d4067a7a5594c18769d451a8ad
 
-PODFILE CHECKSUM: 24fc5cb167876934b2ddb4862b177d625dcd339f
+PODFILE CHECKSUM: f9879a5c9814555edc418c9bfdab73119c8dac57
 
 COCOAPODS: 1.1.1

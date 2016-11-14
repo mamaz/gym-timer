@@ -22,6 +22,7 @@ class GTSetupViewController: UIViewController {
     
     convenience init(flowController: AnyObject, viewModel: AnyObject) {
         self.init()
+        // overridden construct here
     }
     
     override func viewDidLoad() {
@@ -36,6 +37,5 @@ class GTSetupViewController: UIViewController {
         super.didReceiveMemoryWarning()
         
     }
-
 
 }

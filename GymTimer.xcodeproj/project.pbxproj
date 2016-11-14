@@ -11,6 +11,15 @@
 		804C7F2958C643BDA718ED48 /* Pods_GymTimerUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ECA6C5C4F45B5C5C735C85C7 /* Pods_GymTimerUITests.framework */; };
 		ADAFAC081DD4C74500D5E341 /* GTTimerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADAFAC071DD4C74500D5E341 /* GTTimerViewController.swift */; };
 		ADAFAC091DD4C74500D5E341 /* GTTimerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADAFAC071DD4C74500D5E341 /* GTTimerViewController.swift */; };
+		ADAFAC0B1DD4D84700D5E341 /* GTFlowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADAFAC0A1DD4D84700D5E341 /* GTFlowController.swift */; };
+		ADAFAC0C1DD4D84700D5E341 /* GTFlowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADAFAC0A1DD4D84700D5E341 /* GTFlowController.swift */; };
+		ADAFAC111DD4D89C00D5E341 /* GTSetupViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADAFAC101DD4D89C00D5E341 /* GTSetupViewModel.swift */; };
+		ADAFAC121DD4D89C00D5E341 /* GTSetupViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADAFAC101DD4D89C00D5E341 /* GTSetupViewModel.swift */; };
+		ADAFAC141DD4D8C500D5E341 /* GTTimerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADAFAC131DD4D8C500D5E341 /* GTTimerViewModel.swift */; };
+		ADAFAC151DD4D8C500D5E341 /* GTTimerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADAFAC131DD4D8C500D5E341 /* GTTimerViewModel.swift */; };
+		ADAFAC181DD9A80F00D5E341 /* GTTimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADAFAC171DD9A80F00D5E341 /* GTTimerView.swift */; };
+		ADAFAC191DD9A80F00D5E341 /* GTTimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADAFAC171DD9A80F00D5E341 /* GTTimerView.swift */; };
+		ADAFAC1A1DD9A80F00D5E341 /* GTTimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADAFAC171DD9A80F00D5E341 /* GTTimerView.swift */; };
 		ADD004861DD4C364001B880E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADD004851DD4C364001B880E /* AppDelegate.swift */; };
 		ADD004881DD4C364001B880E /* GTSetupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADD004871DD4C364001B880E /* GTSetupViewController.swift */; };
 		ADD0048D1DD4C364001B880E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ADD0048C1DD4C364001B880E /* Assets.xcassets */; };
@@ -43,6 +52,10 @@
 		9A6ED3D921BC8D9E05ADD061 /* Pods-GymTimer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GymTimer.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GymTimer/Pods-GymTimer.debug.xcconfig"; sourceTree = "<group>"; };
 		9C7D638837F57CC73A96FD1C /* Pods-GymTimerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GymTimerTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GymTimerTests/Pods-GymTimerTests.debug.xcconfig"; sourceTree = "<group>"; };
 		ADAFAC071DD4C74500D5E341 /* GTTimerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GTTimerViewController.swift; sourceTree = "<group>"; };
+		ADAFAC0A1DD4D84700D5E341 /* GTFlowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GTFlowController.swift; sourceTree = "<group>"; };
+		ADAFAC101DD4D89C00D5E341 /* GTSetupViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GTSetupViewModel.swift; sourceTree = "<group>"; };
+		ADAFAC131DD4D8C500D5E341 /* GTTimerViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GTTimerViewModel.swift; sourceTree = "<group>"; };
+		ADAFAC171DD9A80F00D5E341 /* GTTimerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GTTimerView.swift; sourceTree = "<group>"; };
 		ADD004821DD4C364001B880E /* GymTimer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GymTimer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ADD004851DD4C364001B880E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ADD004871DD4C364001B880E /* GTSetupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GTSetupViewController.swift; sourceTree = "<group>"; };
@@ -113,6 +126,40 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		ADAFAC0D1DD4D85B00D5E341 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				ADAFAC0A1DD4D84700D5E341 /* GTFlowController.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		ADAFAC0E1DD4D86500D5E341 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				ADAFAC101DD4D89C00D5E341 /* GTSetupViewModel.swift */,
+				ADAFAC131DD4D8C500D5E341 /* GTTimerViewModel.swift */,
+			);
+			name = ViewModels;
+			sourceTree = "<group>";
+		};
+		ADAFAC0F1DD4D87A00D5E341 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				ADD004871DD4C364001B880E /* GTSetupViewController.swift */,
+				ADAFAC071DD4C74500D5E341 /* GTTimerViewController.swift */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		ADAFAC161DD9A7D100D5E341 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				ADAFAC171DD9A80F00D5E341 /* GTTimerView.swift */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
 		ADD004791DD4C364001B880E = {
 			isa = PBXGroup;
 			children = (
@@ -139,8 +186,10 @@
 			isa = PBXGroup;
 			children = (
 				ADD004851DD4C364001B880E /* AppDelegate.swift */,
-				ADD004871DD4C364001B880E /* GTSetupViewController.swift */,
-				ADAFAC071DD4C74500D5E341 /* GTTimerViewController.swift */,
+				ADAFAC0F1DD4D87A00D5E341 /* ViewControllers */,
+				ADAFAC161DD9A7D100D5E341 /* Views */,
+				ADAFAC0E1DD4D86500D5E341 /* ViewModels */,
+				ADAFAC0D1DD4D85B00D5E341 /* Controllers */,
 				ADD0048C1DD4C364001B880E /* Assets.xcassets */,
 				ADD0048E1DD4C364001B880E /* LaunchScreen.storyboard */,
 				ADD004911DD4C364001B880E /* Info.plist */,
@@ -446,7 +495,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ADAFAC181DD9A80F00D5E341 /* GTTimerView.swift in Sources */,
+				ADAFAC0B1DD4D84700D5E341 /* GTFlowController.swift in Sources */,
 				ADD004881DD4C364001B880E /* GTSetupViewController.swift in Sources */,
+				ADAFAC111DD4D89C00D5E341 /* GTSetupViewModel.swift in Sources */,
+				ADAFAC141DD4D8C500D5E341 /* GTTimerViewModel.swift in Sources */,
 				ADAFAC081DD4C74500D5E341 /* GTTimerViewController.swift in Sources */,
 				ADD004861DD4C364001B880E /* AppDelegate.swift in Sources */,
 			);
@@ -457,7 +510,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				ADD0049B1DD4C364001B880E /* GymTimerTests.swift in Sources */,
+				ADAFAC121DD4D89C00D5E341 /* GTSetupViewModel.swift in Sources */,
+				ADAFAC0C1DD4D84700D5E341 /* GTFlowController.swift in Sources */,
+				ADAFAC191DD9A80F00D5E341 /* GTTimerView.swift in Sources */,
 				ADAFAC091DD4C74500D5E341 /* GTTimerViewController.swift in Sources */,
+				ADAFAC151DD4D8C500D5E341 /* GTTimerViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -466,6 +523,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				ADD004A61DD4C364001B880E /* GymTimerUITests.swift in Sources */,
+				ADAFAC1A1DD9A80F00D5E341 /* GTTimerView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
