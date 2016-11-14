@@ -11,9 +11,11 @@ import SnapKit
 
 class GTSetupViewController: UIViewController {
     
+    private lazy var descriptionLabel = UILabel()
+    private lazy var counterLabel = UILabel()
     private lazy var stepper = UIStepper()
     private lazy var startButton = UIButton()
-    private lazy var descriptionLabel = UILabel()
+    
     
     // the compiler for swift 2.3 / 3 
     // require this
@@ -32,10 +34,11 @@ class GTSetupViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         self.view.backgroundColor = UIColor.white
         self.title = "Setup View"
+        
         self.setUpDescriptionLabel()
+        self.setUpCounterLabel()
         self.setUpStepper()
         self.setUpStartButton()
     }
@@ -45,8 +48,8 @@ class GTSetupViewController: UIViewController {
         
     }
     
-    
     // Views
+    
     private func setUpDescriptionLabel() {
         self.descriptionLabel.text = "Please select how many reps you want to finish today:"
         self.descriptionLabel.lineBreakMode = .byWordWrapping
@@ -60,13 +63,27 @@ class GTSetupViewController: UIViewController {
         }
     }
     
+    private func setUpCounterLabel() {
+        self.counterLabel.text = "0"
+        self.counterLabel.font = UIFont(name: "Avenir", size: 50)
+        self.view.addSubview(self.counterLabel)
+        
+        self.counterLabel.snp.makeConstraints { make in
+            make.centerX.equalTo(self.view)
+            make.top.equalTo(self.descriptionLabel.snp.bottom).offset(15)
+            make.width.equalTo(30)
+            make.height.equalTo(50)
+        }
+    }
+    
     private func setUpStepper() {
         self.view.addSubview(stepper);
+        
         self.stepper.snp.makeConstraints { make in
             make.width.equalTo(100)
             make.height.equalTo(30)
-            make.top.equalTo(self.descriptionLabel.snp.bottom).offset(10.0)
-            make.centerX.equalTo(self.descriptionLabel.snp.centerX)
+            make.top.equalTo(self.counterLabel.snp.bottom).offset(10.0)
+            make.centerX.equalTo(self.view)
         }
     }
     
