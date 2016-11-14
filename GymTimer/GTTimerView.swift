@@ -11,19 +11,37 @@ import SnapKit
 
 class GTTimerView: UIView {
     
-    lazy var timerLabel = UILabel()
+    public var text: String? {
+        set {
+            self.timerLabel.text = text
+        }
+        
+        get {
+            return self.text
+        }
+    }
+    
+    private lazy var padding: CGFloat = 15.0
+    private lazy var timerLabelHeight: CGFloat = 30
+    private lazy var timerLabel = UILabel()
     
     convenience init() {
         self.init()
         setTimerLabel()
     }
     
-    func setTimerLabel() -> Void{
+    private func setTimerLabel() -> Void{
         self.addSubview(timerLabel)
         self.timerLabel.snp.makeConstraints { make in
             make.center.equalToSuperview()
-            make.width.equalTo(150)
-            make.height.equalTo(50)
+            make.width.equalTo(self.currentSize().width - (2 * padding))
+            make.height.equalTo(timerLabelHeight)
         }
+    }
+    
+    private func currentSize() -> CGSize {
+        return self.frame.size == CGSize.zero ?
+                                  CGSize(width: 70, height: 30) :
+                                  self.frame.size
     }
 }
