@@ -13,6 +13,7 @@ class GTSetupViewController: UIViewController {
     
     private lazy var stepper = UIStepper()
     private lazy var startButton = UIButton()
+    private lazy var descriptionLabel = UILabel()
     
     // the compiler for swift 2.3 / 3 
     // require this
@@ -34,6 +35,7 @@ class GTSetupViewController: UIViewController {
         
         self.view.backgroundColor = UIColor.white
         self.title = "Setup View"
+        self.setUpDescriptionLabel()
         self.setUpStepper()
         self.setUpStartButton()
     }
@@ -45,13 +47,26 @@ class GTSetupViewController: UIViewController {
     
     
     // Views
+    private func setUpDescriptionLabel() {
+        self.descriptionLabel.text = "Please select how many reps you want to finish today:"
+        self.descriptionLabel.lineBreakMode = .byWordWrapping
+        self.descriptionLabel.numberOfLines = 0
+        self.view.addSubview(self.descriptionLabel)
+        self.descriptionLabel.snp.makeConstraints { make in
+            make.left.equalTo(10)
+            make.right.equalTo(-10)
+            make.top.equalTo(70)
+            make.height.greaterThanOrEqualTo(30.0)
+        }
+    }
+    
     private func setUpStepper() {
         self.view.addSubview(stepper);
         self.stepper.snp.makeConstraints { make in
             make.width.equalTo(100)
             make.height.equalTo(30)
-            make.centerY.equalTo(self.view).offset(50)
-            make.centerX.equalTo(self.view)
+            make.top.equalTo(self.descriptionLabel.snp.bottom).offset(10.0)
+            make.centerX.equalTo(self.descriptionLabel.snp.centerX)
         }
     }
     
