@@ -8,6 +8,7 @@
 
 import UIKit
 import SnapKit
+import ReactiveCocoa
 
 class GTSetupViewController: UIViewController {
     
@@ -15,7 +16,7 @@ class GTSetupViewController: UIViewController {
     private lazy var counterLabel = UILabel()
     private lazy var stepper = UIStepper()
     private lazy var startButton = UIButton()
-    
+    private var setupViewModel: GTSetupViewModel?
     
     // the compiler for swift 2.3 / 3 
     // require this
@@ -27,9 +28,9 @@ class GTSetupViewController: UIViewController {
         super.init(nibName: nil, bundle: nil)
     }
     
-    convenience init(flowController: AnyObject, viewModel: AnyObject) {
+    convenience init(flowController: AnyObject, viewModel: GTSetupViewModel!) {
         self.init()
-        // overridden construct here
+        self.setupViewModel = viewModel
     }
     
     override func viewDidLoad() {
@@ -41,6 +42,14 @@ class GTSetupViewController: UIViewController {
         self.setUpCounterLabel()
         self.setUpStepper()
         self.setUpStartButton()
+        
+        
+        self.stepper.reactive.trigger(for: .valueChanged).observeValues { [weak self] in
+            let doubleValue: Double = (self?.stepper.value as Double?)!
+            let intValue: Int = Int(doubleValue)
+            self?.setupViewModel?.counter = intValue
+            self?.counterLabel.text = "\(intValue)"
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -49,7 +58,6 @@ class GTSetupViewController: UIViewController {
     }
     
     // Views
-    
     private func setUpDescriptionLabel() {
         self.descriptionLabel.text = "Please select how many reps you want to finish today:"
         self.descriptionLabel.lineBreakMode = .byWordWrapping
@@ -71,7 +79,7 @@ class GTSetupViewController: UIViewController {
         self.counterLabel.snp.makeConstraints { make in
             make.centerX.equalTo(self.view)
             make.top.equalTo(self.descriptionLabel.snp.bottom).offset(15)
-            make.width.equalTo(30)
+            make.width.greaterThanOrEqualTo(30)
             make.height.equalTo(50)
         }
     }
@@ -92,7 +100,7 @@ class GTSetupViewController: UIViewController {
         self.startButton.setTitle(startText, for: .normal)
         self.startButton.setTitle(startText, for: .highlighted)
         self.startButton.setTitleColor(UIColor.black, for: .normal)
-        self.startButton.setTitleColor(UIColor.black, for: .highlighted)
+        self.startButton.setTitleColor(UIColor.gray, for: .highlighted)
         self.view.addSubview(self.startButton);
         
         self.startButton.snp.makeConstraints { make in

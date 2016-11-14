@@ -9,6 +9,7 @@ target 'GymTimer' do
   # Pods for GymTimer
 	pod 'ChameleonFramework', '2.1.0'
     pod 'SnapKit', '~>3.0.2'
+    pod 'ReactiveCocoa', :git => 'https://github.com/ReactiveCocoa/ReactiveCocoa.git'
 	
   target 'GymTimerTests' do
     inherit! :search_paths

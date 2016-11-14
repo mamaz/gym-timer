@@ -2,16 +2,34 @@ PODS:
   - ChameleonFramework (2.1.0):
     - ChameleonFramework/Default (= 2.1.0)
   - ChameleonFramework/Default (2.1.0)
+  - ReactiveCocoa (5.0.0-alpha.3):
+    - ReactiveSwift (~> 1.0.0-alpha.3)
+  - ReactiveSwift (1.0.0-alpha.3):
+    - Result (~> 3.0)
+  - Result (3.0.0)
   - SnapKit (3.0.2)
 
 DEPENDENCIES:
   - ChameleonFramework (= 2.1.0)
+  - ReactiveCocoa (from `https://github.com/ReactiveCocoa/ReactiveCocoa.git`)
   - SnapKit (~> 3.0.2)
+
+EXTERNAL SOURCES:
+  ReactiveCocoa:
+    :git: https://github.com/ReactiveCocoa/ReactiveCocoa.git
+
+CHECKOUT OPTIONS:
+  ReactiveCocoa:
+    :commit: 32c08ec76fe6ad6d86754b6d0ca65c81912159f7
+    :git: https://github.com/ReactiveCocoa/ReactiveCocoa.git
 
 SPEC CHECKSUMS:
   ChameleonFramework: d21a3cc247abfe5e37609a283a8238b03575cf64
+  ReactiveCocoa: a8cab5d2d4c73affb24d8bbf914ec5bfcb25cca9
+  ReactiveSwift: d67b677f9574ba614d94022a88fcf456e77fa515
+  Result: 1b3e431f37cbcd3ad89c6aa9ab0ae55515fae3b6
   SnapKit: 2e456761aa92d4d4067a7a5594c18769d451a8ad
 
-PODFILE CHECKSUM: f9879a5c9814555edc418c9bfdab73119c8dac57
+PODFILE CHECKSUM: bbc3563f9f1b6183fdff01867a1c08911db0c44d
 
 COCOAPODS: 1.1.1
