@@ -12,11 +12,15 @@ import ReactiveCocoa
 
 class GTSetupViewController: UIViewController {
     
+    public var goToTimerView: ((_ setupViewMode: GTSetupViewModel?) -> Void)?
+    
     private lazy var descriptionLabel = UILabel()
     private lazy var counterLabel = UILabel()
     private lazy var stepper = UIStepper()
     private lazy var startButton = UIButton()
-    private var setupViewModel: GTSetupViewModel?
+    
+    private weak var setupViewModel: GTSetupViewModel?
+    private weak var flowController: GTFlowController?
     
     // the compiler for swift 2.3 / 3 
     // require this
@@ -28,27 +32,37 @@ class GTSetupViewController: UIViewController {
         super.init(nibName: nil, bundle: nil)
     }
     
-    convenience init(flowController: AnyObject, viewModel: GTSetupViewModel!) {
+    convenience init(flowController: GTFlowController?, viewModel: GTSetupViewModel?) {
         self.init()
         self.setupViewModel = viewModel
+        self.flowController = flowController
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         self.view.backgroundColor = UIColor.white
         self.title = "Setup View"
         
+        // setup style and postions for views
         self.setUpDescriptionLabel()
         self.setUpCounterLabel()
         self.setUpStepper()
         self.setUpStartButton()
         
-        
-        self.stepper.reactive.trigger(for: .valueChanged).observeValues { [weak self] in
-            let doubleValue: Double = (self?.stepper.value as Double?)!
+        // actions
+        self.stepper.reactive.trigger(for: .valueChanged).observeValues { [unowned self] in
+            let doubleValue: Double = (self.stepper.value as Double?)!
             let intValue: Int = Int(doubleValue)
-            self?.setupViewModel?.counter = intValue
-            self?.counterLabel.text = "\(intValue)"
+            self.setupViewModel?.counter = intValue
+            self.counterLabel.text = "\(intValue)"
+        }
+        
+        self.startButton.reactive.trigger(for: .touchUpInside).observeValues { [unowned self] in
+            if let go = self.goToTimerView {
+                print("To to timerView")
+                go(self.setupViewModel)
+            }
         }
     }
 

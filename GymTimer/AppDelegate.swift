@@ -12,15 +12,17 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-    var flowController: NSObject?
-
+    lazy var flowController = GTFlowController()
+    lazy var setupViewModel = GTSetupViewModel()
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
         self.window = {
             let window = UIWindow(frame: UIScreen.main.bounds)
-            let setupViewController = GTSetupViewController()
+            let setupViewController = GTSetupViewController(flowController: self.flowController, viewModel: self.setupViewModel)
             let navigationController = UINavigationController(rootViewController: setupViewController)
+            self.flowController.configureSetupViewController(setupViewController: setupViewController, navigationController: navigationController)
+            
             window.rootViewController = navigationController
             window.makeKeyAndVisible()
             

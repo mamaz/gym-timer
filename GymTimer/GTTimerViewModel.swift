@@ -10,5 +10,9 @@ import UIKit
 
 class GTTimerViewModel: NSObject {
     
-    
+    var counter: Int?
+    convenience init(counter: Int?){
+        self.init()
+        self.counter = counter
+    }
 }
