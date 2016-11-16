@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 
 
-class GTTimerViewController: UIViewController {
+class GTTimerViewController: UIViewController, GTTimerViewModelDelegate {
     
     var timerViewModel: GTTimerViewModel?
     
@@ -35,6 +35,7 @@ class GTTimerViewController: UIViewController {
         self.view.backgroundColor = UIColor.white
         self.title = "Timer"
         
+        self.timerViewModel?.start(delegate: self)
     }
     
     override func didReceiveMemoryWarning() {
@@ -42,5 +43,8 @@ class GTTimerViewController: UIViewController {
         
     }
     
-    
+    // delegates
+    func didTick(time: String, mode: TimerMode) {
+        print("Time \(time) and mode \(mode)")
+    }
 }
