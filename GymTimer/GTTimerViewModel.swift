@@ -20,26 +20,27 @@ class GTTimerViewModel: NSObject {
     }
     
     public weak var delegate: GTTimerViewModelDelegate?
-//    private lazy var timer = Timer.scheduledTimer(timeInterval: 1.0,
-//                                             target: self,
-//                                             selector: #selector(update),
-//                                             userInfo: nil,
-//                                             repeats: true)
+    private var timer = Timer()
     
     private var workTimer: Int = 20
     private var restTime: Int = 10
     private var mode: TimerMode = .Work
     
     
-//    var counter: Int = 0
-    override init() {
-        super.init()
+    var counter: Int = 0
+    convenience init(counter: Int) {
+        self.init()
+        self.counter = counter
     }
     
     func start(delegate: GTTimerViewModelDelegate?) {
         self.delegate = delegate
-//        self.timer.fire()
-//        self.counter -= 1
+        self.timer = Timer.scheduledTimer(timeInterval: 1.0,
+                                          target: self,
+                                          selector: #selector(update),
+                                          userInfo: nil,
+                                          repeats: true)
+        self.counter -= 1
     }
     
     func update(timer:Timer) {
