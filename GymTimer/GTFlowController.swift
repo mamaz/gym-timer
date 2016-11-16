@@ -20,7 +20,8 @@ class GTFlowController: NSObject {
     public func configureSetupViewController(setupViewController: GTSetupViewController?,
                                       navigationController: UINavigationController?) {
         setupViewController?.goToTimerView = { setupViewModel in
-            let timerViewModel = GTTimerViewModel(counter: setupViewModel?.counter)
+            
+            let timerViewModel = GTTimerViewModel()
             let timerViewController = GTTimerViewController(viewModel: timerViewModel)
             navigationController?.pushViewController(timerViewController, animated: true)
         }
