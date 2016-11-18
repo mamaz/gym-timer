@@ -10,7 +10,7 @@ import UIKit
 import Foundation
 
 enum TimerMode {
-    case Work
+    case Workout
     case Rest
     case Finish
 }
@@ -25,9 +25,9 @@ class GTTimerViewModel: NSObject {
     public weak var delegate: GTTimerViewModelDelegate?
     
     private var timer: Timer?
-    private var workTime: Int = 20
-    private var restTime: Int = 10
-    private var mode: TimerMode = .Work
+    private var workTime: Int = Constants.defaultWorkoutTime
+    private var restTime: Int = Constants.defaultRestTime
+    private var mode: TimerMode = .Workout
     
     
     init(counter: Int) {
@@ -46,16 +46,14 @@ class GTTimerViewModel: NSObject {
     }
     
     @objc private func update(timer:Timer) {
-        print("Update is called")
         if self.counter < 0 {
             return;
         }
         
         switch self.mode {
-            case .Work:
-                print("work")
+            case .Workout:
                 self.workTime -= 1
-                self.delegate?.didTick(time: String(self.workTime), mode: .Work)
+                self.delegate?.didTick(time: String(self.workTime), mode: .Workout)
                 
                 if self.workTime == 0 {
                     self.mode = .Rest
@@ -63,12 +61,11 @@ class GTTimerViewModel: NSObject {
                 }
             
             case .Rest:
-                print("rest")
                 self.restTime -= 1
                 self.delegate?.didTick(time: String(self.restTime), mode: .Rest)
                 
                 if self.restTime == 0 {
-                    self.mode = .Work
+                    self.mode = .Workout
                     self.counter -= 1
                     self.resetTimer()
                 }
@@ -84,8 +81,6 @@ class GTTimerViewModel: NSObject {
             default:
                 print("default")
         }
-        
-        
     }
     
     private func resetTimer(){
