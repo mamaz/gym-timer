@@ -21,7 +21,7 @@ protocol GTTimerViewModelDelegate: class {
 
 class GTTimerViewModel: NSObject {
     
-    public var counter: Int = 0
+    public var counter: Int = 1
     public weak var delegate: GTTimerViewModelDelegate?
     
     private var timer: Timer?
@@ -30,9 +30,9 @@ class GTTimerViewModel: NSObject {
     private var mode: TimerMode = .Work
     
     
-    convenience init(counter: Int) {
-        self.init()
+    init(counter: Int) {
         self.counter = counter
+        super.init()
     }
     
     public func start(delegate: GTTimerViewModelDelegate?) {
@@ -47,37 +47,40 @@ class GTTimerViewModel: NSObject {
     
     @objc private func update(timer:Timer) {
         print("Update is called")
+        if self.counter < 0 {
+            return;
+        }
         
         switch self.mode {
             case .Work:
                 print("work")
-                if self.counter >= 0 {
-                    self.workTime -= 1
-                    self.delegate?.didTick(time: String(self.workTime), mode: .Work)
-                    
-                    if self.workTime == 0 {
-                        self.mode = .Rest
-                        self.resetTimer()
-                    }
+                self.workTime -= 1
+                self.delegate?.didTick(time: String(self.workTime), mode: .Work)
+                
+                if self.workTime == 0 {
+                    self.mode = .Rest
+                    self.resetTimer()
                 }
-                else {
+            
+            case .Rest:
+                print("rest")
+                self.restTime -= 1
+                self.delegate?.didTick(time: String(self.restTime), mode: .Rest)
+                
+                if self.restTime == 0 {
+                    self.mode = .Work
+                    self.counter -= 1
+                    self.resetTimer()
+                }
+                
+                if self.counter < 0 {
                     self.timer?.invalidate()
                     self.timer = nil
                     
                     self.delegate?.didTick(time: String(0), mode: .Finish)
                     self.resetTimer()
                 }
-            case .Rest:
-                print("rest")
-                if self.counter >= 0 {
-                    self.restTime -= 1
-                    self.delegate?.didTick(time: String(self.restTime), mode: .Rest)
-                    
-                    if self.restTime == 0 {
-                        self.mode = .Work
-                        self.resetTimer()
-                    }
-                }
+            
             default:
                 print("default")
         }
