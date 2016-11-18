@@ -12,7 +12,7 @@ import ReactiveCocoa
 
 class GTSetupViewController: UIViewController {
     
-    public var goToTimerView: ((_ setupViewMode: GTSetupViewModel?) -> Void)?
+    public var goToTimerView: ((_ setupViewModel: GTSetupViewModel?) -> Void)?
     
     private lazy var descriptionLabel = UILabel()
     private lazy var counterLabel = UILabel()
@@ -50,7 +50,8 @@ class GTSetupViewController: UIViewController {
         self.setUpStepper()
         self.setUpStartButton()
         
-        // actions
+        // change counter label when stepper is
+        // incremented or decremented
         self.stepper.reactive.trigger(for: .valueChanged).observeValues { [unowned self] in
             let doubleValue: Double = (self.stepper.value as Double?)!
             let intValue: Int = Int(doubleValue)
@@ -58,10 +59,12 @@ class GTSetupViewController: UIViewController {
             self.counterLabel.text = "\(intValue)"
         }
         
+        // go to timer view 
+        // when start button is tapped
         self.startButton.reactive.trigger(for: .touchUpInside).observeValues { [unowned self] in
-            if let go = self.goToTimerView {
-                print("To to timerView")
-                go(self.setupViewModel)
+            if let goToTimer = self.goToTimerView {
+                print("Go to timerView")
+                goToTimer(self.setupViewModel)
             }
         }
     }
