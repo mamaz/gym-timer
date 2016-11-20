@@ -9,6 +9,7 @@
 import UIKit
 import SnapKit
 import ReactiveCocoa
+import ReactiveSwift
 
 class GTSetupViewController: UIViewController {
     
@@ -61,11 +62,18 @@ class GTSetupViewController: UIViewController {
         
         // go to timer view 
         // when start button is tapped
-        self.startButton.reactive.trigger(for: .touchUpInside).observeValues { [unowned self] in
+        self.startButton.reactive.trigger(for: .touchUpInside)
+        .observeValues { [unowned self] in
             if let goToTimer = self.goToTimerView {
                 print("Go to timerView")
                 goToTimer(self.setupViewModel)
             }
+        }
+        
+        // observe counter
+        let property = DynamicProperty<Int>(object: self.setupViewModel!, keyPath: "counter")
+        property.producer.startWithValues { counter in
+            print("counter: \(counter!)")
         }
     }
 

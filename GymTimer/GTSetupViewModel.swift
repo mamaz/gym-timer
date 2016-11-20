@@ -9,5 +9,5 @@
 import UIKit
 
 class GTSetupViewModel: NSObject {
-    public var counter: Int = 0
+    public dynamic var counter: Int = 0
 }
