@@ -42,7 +42,7 @@ class GTSetupViewController: UIViewController {
         super.viewDidLoad()
         
         self.view.backgroundColor = UIColor.white
-        self.title = "Setup View"
+        self.title = "Setup"
         
         // setup style and postions for views
         self.setUpDescriptionLabel()

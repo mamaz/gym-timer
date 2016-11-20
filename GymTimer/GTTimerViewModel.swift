@@ -61,7 +61,6 @@ class GTTimerViewModel: NSObject {
                 }
             
             case .Rest:
-                self.restTime -= 1
                 self.delegate?.didTick(time: String(self.restTime), mode: .Rest)
                 
                 if self.restTime == 0 {
@@ -77,15 +76,16 @@ class GTTimerViewModel: NSObject {
                     self.delegate?.didTick(time: String(0), mode: .Finish)
                     self.resetTimer()
                 }
-            
+                
+                self.restTime -= 1
             default:
                 print("default")
         }
     }
     
     private func resetTimer(){
-        self.workTime = 20
-        self.restTime = 10
+        self.workTime = Constants.defaultWorkoutTime
+        self.restTime = Constants.defaultRestTime
     }
 }
 
