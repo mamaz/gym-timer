@@ -38,7 +38,7 @@ class GTTimerViewController: UIViewController, GTTimerViewModelDelegate {
         
         self.view.backgroundColor = UIColor.white
         self.title = "Timer"
-        self.navigationController?.navigationItem.hidesBackButton = true
+        self.navigationItem.hidesBackButton = true
         
         self.setUpModeLabel()
         self.setUpCountdownLabel()
