@@ -9,14 +9,14 @@
 import Foundation
 import UIKit
 import SnapKit
-
+import ReactiveCocoa
 
 class GTTimerViewController: UIViewController, GTTimerViewModelDelegate {
     
     private var timerViewModel: GTTimerViewModel?
     private lazy var modeLabel = UILabel()
     private lazy var timerLabel = UILabel()
-    private lazy var stopFinishButton = UILabel()
+    private lazy var stopButton = UIButton()
     
     // the compiler for swift 2.3 / 3
     // require this
@@ -38,10 +38,15 @@ class GTTimerViewController: UIViewController, GTTimerViewModelDelegate {
         
         self.view.backgroundColor = UIColor.white
         self.title = "Timer"
+        self.navigationController?.navigationItem.hidesBackButton = true
         
         self.setUpModeLabel()
         self.setUpCountdownLabel()
-        self.setUpStopFinishButton()
+        self.setUpStopButton()
+        
+        self.stopButton.reactive.trigger(for: .touchUpInside).observeValues { [unowned self] in
+            self.navigationController?.popViewController(animated: true)
+        }
         
         self.timerViewModel?.start(delegate: self)
     }
@@ -87,7 +92,24 @@ class GTTimerViewController: UIViewController, GTTimerViewModelDelegate {
         }
     }
     
-    private func setUpStopFinishButton() {
+    private func setUpStopButton() {
+        self.stopButton.setTitle("Stop", for: .normal)
+        self.stopButton.backgroundColor = UIColor.darkGray
+        self.stopButton.layer.cornerRadius = 2.0
+        self.stopButton.layer.masksToBounds = true
+        self.view.addSubview(self.stopButton)
+        
+        self.stopButton.snp.makeConstraints { make in
+            make.centerX.equalTo(self.view)
+            make.top.equalTo(self.timerLabel.snp.bottom).offset(20)
+            make.left.equalTo(30)
+            make.right.equalTo(-30)
+            make.height.equalTo(30)
+        }
+    }
     
+    deinit {
+        print("deinit on GTTimerViewController")
+        self.timerViewModel = nil
     }
 }
