@@ -72,8 +72,9 @@ class GTSetupViewController: UIViewController {
         
         // observe counter
         let property = DynamicProperty<Int>(object: self.setupViewModel!, keyPath: "counter")
-        property.producer.startWithValues { counter in
+        property.producer.startWithValues { [unowned self] counter in
             print("counter: \(counter!)")
+            self.startButton.isHidden = (counter! == 0)
         }
     }
 
