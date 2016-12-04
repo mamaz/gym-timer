@@ -3,18 +3,21 @@
 
 This app is intended to help people doing High Intensity Interval Training (HIIT) consisting 20 seconds workout and 10 seconds resting, by Jordan Yeoh in this [video](https://www.facebook.com/video.php?v=1040520155972298). 
 
-To install:
+## Installing
 
 1. Install cocoapods.
 2. excute `pod install`.
 3. Open the xcworkspace.
 
-TODO:
+## TODO
 
 * Colorify.
 * Circular progress indicator.
 
-MIT License
+## License
+
+MIT
+
 Copyright (c) 2016 mamaz
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
