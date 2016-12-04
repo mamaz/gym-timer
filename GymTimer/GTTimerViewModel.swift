@@ -17,6 +17,7 @@ enum TimerMode {
 
 protocol GTTimerViewModelDelegate: class {
     func didTick(time: String, mode: TimerMode) -> Void
+    func didFinishTicking() -> Void
 }
 
 class GTTimerViewModel: NSObject {
@@ -75,6 +76,7 @@ class GTTimerViewModel: NSObject {
                     
                     self.delegate?.didTick(time: String(0), mode: .Finish)
                     self.resetTimer()
+                    self.delegate?.didFinishTicking()
                 }
                 
                 self.restTime -= 1
@@ -87,5 +89,6 @@ class GTTimerViewModel: NSObject {
         self.workTime = Constants.defaultWorkoutTime
         self.restTime = Constants.defaultRestTime
     }
+    
 }
 

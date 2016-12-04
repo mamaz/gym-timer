@@ -7,6 +7,6 @@
 //
 
 struct Constants {
-    static let defaultWorkoutTime = 20
-    static let defaultRestTime = 10
+    static let defaultWorkoutTime = 2
+    static let defaultRestTime = 1
 }

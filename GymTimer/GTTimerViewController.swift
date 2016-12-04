@@ -62,6 +62,11 @@ class GTTimerViewController: UIViewController, GTTimerViewModelDelegate {
         self.timerLabel.text = time
     }
     
+    func didFinishTicking() {
+        self.modeLabel.text = "Finish"
+        self.stopButton.setTitle("Finish", for: .normal)
+    }
+    
     // views
     private func setUpModeLabel() {
         self.modeLabel.text = "Workout"
